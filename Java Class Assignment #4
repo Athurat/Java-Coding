@@ -1,0 +1,26 @@
+package FirstStep;
+
+import java.util.Random;
+public class McAlvin {
+
+	public static void main(String[] args) {
+		int Rand;
+		Rand = ((int) (Math.random()*225 + 1));
+		System.out.print("The random decimal number is: "  + Rand);
+		
+	    String Binnum = Integer.toBinaryString(Rand);
+	    System.out.println("\nThis is the number in Binary:" + Binnum);
+
+		int Normnum = Integer.parseInt(Binnum, 2);
+		
+		String Hexnum = Integer.toHexString(Normnum);
+		System.out.println("This is the number in Hexadecimal:" + Hexnum);
+		//Referenced Trenton Gibson for Typecasting
+		System.out.println("This is the number in ASCII character form:" + (char)Rand);
+		
+		
+		
+
+	}
+
+}
