@@ -1,0 +1,36 @@
+package FirstStep;
+// McAlvin Juasemai (9/8/2023)
+// Java Class Assignment 6
+// Referenced Tech with Tim Video on Week 1
+import java.util.Scanner;
+public class McAlvin {
+
+	static Scanner userinput = new Scanner(System.in);
+	public static void main(String[] args) {
+		//asks for the first binary number (as a string)
+		System.out.print("What is your first binary number:");
+		String firstnum = userinput.nextLine();
+		//asks for the second binary number (as a string)
+		System.out.print("Now, what is your second binary number?:");
+		String secondnum = userinput.nextLine();
+		//Convert binary string numbers into integers
+		int x = Integer.parseInt(firstnum,2);
+		int y = Integer.parseInt(secondnum,2);
+		// does the math with the integers and get integer results
+		int addition = x + y;
+		int multiplication = x * y;
+		int division = x / y;
+		int minus = x - y; 
+		// convert the integer values back into binary strings
+		String binaryadd = Integer.toBinaryString(addition);
+		String binarymulti = Integer.toBinaryString(multiplication);
+		String binarydivi = Integer.toBinaryString(division);
+		String binaryminus = Integer.toBinaryString(minus);
+		//print out the binary string results
+		System.out.println("This is x and y binary added: " + binaryadd);
+		System.out.println("This is x and y binary multiplied: " + binarymulti);
+		System.out.println("This is x binary divided by y binary: " + binarydivi);
+		System.out.println("This is x binary subtracted from y binary: " + binaryadd);
+	}
+	
+	}
