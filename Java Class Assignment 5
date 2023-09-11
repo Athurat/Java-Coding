@@ -1,0 +1,29 @@
+package FirstStep;
+// McAlvin Juasemai (9/8/2023)
+// Java Class Assignment 5
+// Referenced Tech with Tim Video on Week 1
+import java.util.Scanner;
+public class McAlvin {
+
+	static Scanner userinput = new Scanner(System.in);
+	public static void main(String[] args) {
+	
+		System.out.print("What is your X number?:");
+		double x = userinput.nextDouble();
+
+		System.out.print("Now what is your Y number?:");
+		double y = userinput.nextDouble();
+		
+		double addition = x + y;
+		double multiplication = x * y;
+		double division = x / y;
+		double exponent = Math.pow(x,y);
+
+		System.out.println("This is x and y added: " + addition);
+		System.out.println("This is x and y multiplied: " + multiplication );
+		System.out.println("This is x divided by y: " + division);
+		System.out.println("This is x to the power of y: " + exponent);
+		
+	}
+
+}
