@@ -1,0 +1,77 @@
+package FirstStep; 
+
+// McAlvin Juasemai (9/17/2023) 
+
+// Java Week 2, Assignmet #2: Encouragment App 
+
+ 
+ 
+
+import java.util.Scanner; 
+
+ 
+ 
+
+public class FirstStep { 
+
+	public static void main(String[] args) { 
+
+		Scanner scanner = new Scanner(System.in); 
+
+		//Ask for age 
+
+		System.out.print("What is your Age?:"); 
+
+		int age = scanner.nextInt(); 
+
+		scanner.nextLine(); 
+
+		//Ask for mood today 
+
+		System.out.print("What is your mood today (Good,Bad or Ok)?:"); 
+
+		String daymood = scanner.nextLine(); 
+
+		 
+
+		String Display = ""; 
+
+				 
+
+		if (age <= 18) { 
+
+			Display = "You are a Child, Enjoy your youth"; 
+
+		}else {  
+
+			Display = "You are an Adult, Do great things with your life"; 
+
+		} 
+
+;				 
+
+		if (daymood.equals("Good")) { 
+
+			Display += "\nThats Great, You are having a good day!";		 
+
+		} 
+
+		else if (daymood.equals("Bad")) { 
+
+			Display += "\nThat's sad to hear, Hope your day gets Better."; 
+
+	} 
+
+		else if(daymood.equals("Ok")) { 
+
+			Display += "\nPretty alright day then."; 
+
+		} 
+
+	 
+
+		System.out.print(Display); 
+
+	} 
+
+} 
