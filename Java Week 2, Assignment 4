@@ -1,0 +1,33 @@
+package FirstStep;
+// McAlvin Juasemai (9/17/2023)
+// Java Week 2, Assignmet #4: Dice APP 
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class FirstStep {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		Random random = new Random();
+		
+		char Response;
+		
+		do {
+			int roll1 = random.nextInt(6) + 1;
+			int roll2 = random.nextInt(6) + 1;
+			int total = roll1 + roll2;
+			
+			System.out.println("Your first Dice roll was:" + roll1);
+			System.out.println("Your second Dice roll was:" + roll2);
+			System.out.println("The total is:" + total);
+			
+			System.out.print("Roll again? (Y/N): ");
+			Response = scanner.next().charAt(0);
+		} while (Response == 'Y');
+	
+		
+}
+
+
+		
+	}
