@@ -1,0 +1,27 @@
+package FirstStep;
+// McAlvin Juasemai (9/17/2023)
+// Java Week 2, Assignmet #3: Piecewise APP 
+
+import java.util.Scanner;
+
+public class FirstStep {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("What should x be?:"); 
+		double x = scanner.nextFloat(); 
+		scanner.nextLine();
+		
+		float Display ;
+		
+		if (x < 0) { 
+			Display = (float) (3 * x + 7);
+		}
+		else if (x >= 0 && x <= 10) {
+			Display = (float) ( Math.pow(x, 2) + 8);
+		}
+		else{
+			Display = (float) ( Math.pow(x, 3) - 6 * Math.pow(x, 2));
+	}
+		System.out.println(Display);
+}
+}
