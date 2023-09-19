@@ -1,0 +1,56 @@
+package FirstStep;
+// McAlvin Juasemai (9/18/2023)
+// Java Week 2, Assignment #5: Array Mod APP 
+
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Random;
+
+public class FirstStep {
+	static Scanner scanner = new Scanner(System.in);
+	Random random = new Random();
+	public static void main(String[] args) {
+		// Establishes array and establishes array limit
+		int[] apple;
+		apple = new int [20 + 1];
+		// Asks user for number input and allows for 20 numbers to be added
+		System.out.print("Enter 20 numbers for your array:");
+		for (int i = 0;i<20;i++) {apple[i] = scanner.nextInt();}
+		// Sorts all 20 numbers by numerical value, least to greatest
+		Arrays.sort(apple,0,20);
+		//Establishes the input character
+		char input;
+		// Starts the do, while loop
+		do {
+			//Prints out the array as a string to the user
+			System.out.print("The numbers are:" + Arrays.toString(apple));
+			//Asks if the User wants to edit a number
+			System.out.print("\nDo you want to edit a number? (Y/N):");
+			//Resets the input character
+			input = scanner.next().charAt(0);
+			// If the input is Y/yes, asks for the index that the user wants to edit
+			if (input =='Y') {
+				System.out.print("\nEnter which index of the number youwant to edit (0-20):");
+				int index = scanner.nextInt();
+				//If the index is 0 -20, the index will be found and the user will be able to edit the number there
+				if(index >= 0 && index < 20) {
+					System.out.print("Please enter the new number:");
+					apple[index] = scanner.nextInt();
+				// If the index is out of the range, this error trap will display and the Yes/No question will be re-asked
+				} else {
+					System.out.println("that is not a valid index, please enter an index:");
+					//The array will be sorted after the new index has been input, and the new array will print
+					Arrays.sort(apple);
+					System.out.println("New Array:" + apple);
+				}
+			}
+			//The Yes/No question will be asked, and the loop will end if anything other than Y is placed
+			
+		} while(input == 'Y'); 
+		}
+		
+}
+
+	
+		
+	
