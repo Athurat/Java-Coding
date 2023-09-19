@@ -1,0 +1,61 @@
+//McAlvin Juasemai 
+
+// 9/18/2023 
+
+// Week 2, Assignment 5: Pascal's Triangle 
+
+package Main; 
+
+import java.util.Scanner; 
+
+public class testspace { 
+
+	public static void main(String[] args) { 
+
+		int Rownum = 10 + 1; 
+
+int[][] triangle = new int[Rownum][]; 
+
+ 
+
+//Create the 2D array and set the first element of the array as 1 
+
+for (int row = 0; row < Rownum; row++) { 
+
+triangle[row] = new int[row + 1]; 
+
+triangle[row][0] = 1; 
+
+} 
+
+// Using the formula fill out the triangle until the 10th/11th row 
+
+for (int row = 1; row < Rownum; row++) { 
+
+for (int column = 1; column < row; column++) { 
+
+triangle[row][column] = triangle[row - 1][column - 1] + triangle[row - 1][column]; 
+
+} 
+
+triangle[row][row] = 1; 
+
+} 
+
+// Using the formula, output Pascal's Triangle 
+
+for (int row = 0; row < Rownum; row++) { 
+
+for (int col = 0; col <= row; col++) { 
+
+System.out.print(triangle[row][col] + " "); 
+
+} 
+
+System.out.println(); 
+
+} 
+
+} 
+
+} 
